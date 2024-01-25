@@ -5,7 +5,7 @@ using BankAccountsDemo.Util;
 using RestSharp;
 using Newtonsoft.Json;
 
-namespace BankAccountsDemo
+namespace BankAccountsDemo.StepDefinitions
 {
     [Binding]
     public class AccountDemoStepDefinitions
@@ -70,7 +70,7 @@ namespace BankAccountsDemo
         [Then(@"Verify the account details are correctly returned in the JSON response for expected (.*)")]
         public void ThenVerifyTheAccountDetailsAreCorrectlyReturnedInTheJSONResponse(string accountNumber)
         {
-            var newAccount = JsonConvert.DeserializeObject<Account>(response.Content);
+            var newAccount = ApiHelper.DeserializeResponse<Account>(response);
             var expectedAccount = accountNumber;
 
             Assert.AreEqual(expectedAccount, newAccount.AccountNumber);
@@ -85,12 +85,8 @@ namespace BankAccountsDemo
             ThenVerifyTheAccountDetailsAreCorrectlyReturnedInTheJSONResponse(accountNumber);
 
         }
-        //[Given(@"Deposit Amount is '([^']*)'")]
-        //public void GivenDepositAmountIs(string p0)
-        //{
-        //    depositRequest.Amount = decimal.Parse(p0);
-        //}
-        [When(@"PUT endpoint triggered to deposit (.*) in X(.*)")]
+
+        [When(@"PUT endpoint triggered to deposit (.*) in Y(.*)")]
         public void WhenPUTEndpointTriggeredToDepositTo(string amount, string accountNumber)
         {
             var url = "/account/deposit";
@@ -106,12 +102,12 @@ namespace BankAccountsDemo
         [Then(@"Verify the new balance is (.*) in the response")]
         public void ThenVerifyTheNewBalanceIsInTheResponse(int expectedAmount)
         {
-            var newAccount = JsonConvert.DeserializeObject<Account>(response.Content);
+            var newAccount = ApiHelper.DeserializeResponse<Account>(response);
 
             Assert.AreEqual(expectedAmount, newAccount.Balance);
         }
 
-        [When(@"PUT endpoint triggered to withdraw (.*) from X(.*)")]
+        [When(@"PUT endpoint triggered to withdraw (.*) from Y(.*)")]
         public void WhenPUTEndpointTriggeredToWithdrawFromX(string amount, string accountNumber)
         {
             var url = "/account/withdraw";

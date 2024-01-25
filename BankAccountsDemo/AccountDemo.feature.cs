@@ -154,7 +154,7 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.When(string.Format("PUT endpoint triggered to deposit {0} in {1}", depositAmount, accountNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 25
-  testRunner.Then("Verify the response code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("Verify the response code is Ok", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 26
   testRunner.And("Verify no error is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -198,7 +198,7 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.When(string.Format("PUT endpoint triggered to withdraw {0} from {1}", withdrawAmount, accountNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 38
-  testRunner.Then("Verify the response code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("Verify the response code is Ok", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 39
   testRunner.And("Verify no error is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -240,7 +240,7 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.When(string.Format("DELETE endpoint triggered with \'{0}\'", accountNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 52
-  testRunner.Then("Verify the response code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("Verify the response code is Ok", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 53
   testRunner.And("Verify no error is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

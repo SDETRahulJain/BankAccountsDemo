@@ -22,7 +22,7 @@ Scenario Outline: Create new Account with valid data
 Scenario Outline: Deposit money to an account
   Given Account with number '<accountNumber>' exists
   When PUT endpoint triggered to deposit <depositAmount> in <accountNumber>
-  Then Verify the response code is 200
+  Then Verify the response code is Ok
   And Verify no error is returned
   And Verify the success message "<depositAmount>$ deposited to Account <accountNumber> successfully"
   And Verify the new balance is <expectedBalance> in the response
@@ -35,7 +35,7 @@ Examples:
   Scenario Outline: Withdraw money from an account
   Given Account with number '<accountNumber>' exists
   When PUT endpoint triggered to withdraw <withdrawAmount> from <accountNumber>
-  Then Verify the response code is 200
+  Then Verify the response code is Ok
   And Verify no error is returned
   And Verify the success message "<withdrawAmount>$ withdrawn from Account <accountNumber> successfully"
   And Verify the new balance is <expectedBalance> in the response
@@ -49,7 +49,7 @@ Examples:
   Scenario Outline: Delete existing account
   Given Account with number '<accountNumber>' exists
   When DELETE endpoint triggered with '<accountNumber>'
-  Then Verify the response code is 200
+  Then Verify the response code is Ok
   And Verify no error is returned
   And Verify the success message "Account <accountNumber> deleted successfully"
 

@@ -18,7 +18,7 @@ This project implements API automation for basic bank system scenarios using Spe
      ```json
      {
         "Data": {
-            "NewBalance": 1000,
+            "Balance": 1000,
             "AccountName": "Rajesh Mittal",
             "AccountNumber": "X123"
         },
@@ -52,7 +52,7 @@ This project implements API automation for basic bank system scenarios using Spe
      {
         "Data": {
             "AccountNumber": "X123",
-            "NewBalance": 2000
+            "Balance": 2000
         },
         "Message": "1000$ deposited to Account X123 successfully",
         "Errors": []
@@ -72,8 +72,8 @@ This project implements API automation for basic bank system scenarios using Spe
      ```json
      {
         "Data": {
-            "AccountID": "X123",
-            "NewBalance": 0
+            "AccountNumber": "X123",
+            "Balance": 0
         },
         "Message": "1000$ withdrawn from Account X123 successfully",
         "Errors": []
@@ -92,10 +92,10 @@ This project implements API automation for basic bank system scenarios using Spe
      ```json
      {
         "Data": {
-            "AccountID": "X123",
-            "CurrentBalance": 0,
+            "AccountNumber": "X123",
+            "Balance": 0,
             "AccountName": "Abc",
-            "AccountAddress": "XYZ123"
+            "Address": "XYZ123"
         },
         "Message": "Account Details are provided",
         "Errors": []
