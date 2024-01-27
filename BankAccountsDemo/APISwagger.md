@@ -102,13 +102,3 @@ This project implements API automation for basic bank system scenarios using Spe
      }
      ```
 
-## Test Coverage
-
-- The provided scenario "Create new Account with valid data" is covered in the feature file.
-- Assertions are made on the response code, absence of errors, success message, and correctness of account details in the JSON response.
-
-## Tech Stacks Used
-
-- SpecFlow: BDD framework for .NET
-- RestSharp: Simple REST and HTTP API Client
-- NUnit: Unit testing framework for .NET
