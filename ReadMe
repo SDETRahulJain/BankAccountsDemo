@@ -1,0 +1,42 @@
+
+Readme.md for Bank Account Management API Automation
+This document provides an overview of the Bank Account Management API automation code base.
+
+1. Overview:
+This project implements a simple API automation framework for testing single-entry bank account functionalities like creation, deletion, deposit, and withdrawal.
+
+2. Tech Stack:
+C# (.NET Framework)
+SpecFlow for BDD test automation
+RestSharp for API calls
+Newtonsoft.Json for JSON serialization/deserialization
+NUnit for unit testing
+
+3. Features:
+Create new account with initial balance and name.
+Delete existing account by account number.
+Deposit money to an existing account.
+Withdraw money from an existing account (within available balance).
+
+4. Test Coverage:
+Each feature scenario is covered by a corresponding SpecFlow step definition with NUnit assertions.
+Tests verify responses for success codes, error messages, data values, and expected behavior.
+
+5. Usage:
+Build the project using Visual Studio or the dotnet build command.
+Run tests using the NUnit Test Runner or the dotnet test command.
+
+6. Directory Structure:
+Features: Feature files containing scenarios.
+StepDefinitions: C# code implementing steps from features.
+Models: Classes representing request and response data.
+Util: Helper class for serialization, API calls, and deserialization.
+Tests: NUnit test project for running assertions.
+Readme.md: This documentation file.
+
+7. Notes:
+This is a basic example and can be extended to include more functionalities and complex scenarios.
+Consider implementing API documentation and security measures for production use.
+
+8. Contact:
+Feel free to raise any questions or suggest improvements through your preferred channels.
